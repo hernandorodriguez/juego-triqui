@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Juego Triqui</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<form action="triqui.html" method="post">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<center>
+		<h1>JUEGO TRIQUI</h1>
+	</center>
+
+	<center>
+		<input type="button" id="1A" value=" " onclick="play(this)">
+		<input type="button" id="1B" value=" " onclick="play(this)">
+		<input type="button" id="1C" value=" " onclick="play(this)">
+		<br>
+		<br>
+		<input type="button" id="2A" value=" " onclick="play(this)">
+		<input type="button" id="2B" value=" " onclick="play(this)">
+		<input type="button" id="2C" value=" " onclick="play(this)">
+		<br>
+		<br>
+		<input type="button" id="3A" value=" " onclick="play(this)">
+		<input type="button" id="3B" value=" " onclick="play(this)">
+		<input type="button" id="3C" value=" " onclick="play(this)">
+		</center>
+
+		&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <button> JUGAR DE NUEVO</button>
+  
+</body>
+</html>		
+
+
+<script>
+	
+	var cuadro;
+	var marca = "X";
+
+	function play(cuadro)
+	 {
+		if (cuadro.value == " ")
+		{
+			cuadro.value = marca;
+			if (marca == "X")
+			{
+				marca = "O";
+			}
+			else
+			{
+				marca = "X";
+		    }
+
+	a = document.getElementById('1A') .value;
+	b = document.getElementById('1B') .value;
+	c = document.getElementById('1C') .value;
+
+	d = document.getElementById('2A') .value;
+	e = document.getElementById('2B') .value;
+	f = document.getElementById('2C') .value;
+
+	g = document.getElementById('3A') .value;
+	h = document.getElementById('3B') .value;
+	i = document.getElementById('3C') .value;
+
+	//Combinación1 a,b,c
+	if(a == "X" && b == "X" && c == "X")
+	{
+		$("#1A").css('background','#07ed53');
+		$("#1B").css('background','#07ed53');
+		$("#1C").css('background','#07ed53');
+	
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	
+	}
+
+	if(a == "O" && b == "O" && c == "O")
+	{
+		$("#1A").css('background','#07ed53');
+		$("#1B").css('background','#07ed53');
+		$("#1C").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+	//Combinación2 d, e, f
+		if(d == "X" && e == "X" && f == "X")
+	{
+		$("#2A").css('background','#07ed53');
+		$("#2B").css('background','#07ed53');
+		$("#2C").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+	if(d == "O" && e == "O" && f == "O")
+	{
+		$("#2A").css('background','#07ed53');
+		$("#2B").css('background','#07ed53');
+		$("#2C").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+	//Combinación3 g, h, i
+		if(g == "X" && h == "X" && i == "X")
+	{
+		$("#3A").css('background','#07ed53');
+		$("#3B").css('background','#07ed53');
+		$("#3C").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+	if(g == "O" && h == "O" && i == "O")
+	{
+		$("#3A").css('background','#07ed53');
+		$("#3B").css('background','#07ed53');
+		$("#3C").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+
+	//Combinación4 a, d, g
+	if(a == "X" && d == "X" && g == "X")
+	{
+		$("#1A").css('background','#07ed53');
+		$("#2A").css('background','#07ed53');
+		$("#3A").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+	if(a == "O" && d == "O" && g == "O")
+	{
+		$("#1A").css('background','#07ed53');
+		$("#2A").css('background','#07ed53');
+		$("#3A").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+	//Combinación5 b, e, h
+		if(b == "X" && e == "X" && h == "X")
+	{
+		$("#1B").css('background','#07ed53');
+		$("#2B").css('background','#07ed53');
+		$("#3B").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+	if(b == "O" && e == "O" && h == "O")
+	{
+		$("#1B").css('background','#07ed53');
+		$("#2B").css('background','#07ed53');
+		$("#3B").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+	//Combinación6 c, f, i
+		if(c == "X" && f == "X" && i == "X")
+	{
+		$("#1C").css('background','#07ed53');
+		$("#2C").css('background','#07ed53');
+		$("#3C").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+	if(c == "O" && f == "O" && i == "O")
+	{
+		$("#1C").css('background','#07ed53');
+		$("#2C").css('background','#07ed53');
+		$("#3C").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+	//Combinación7 c, e, g
+	if(c == "X" && e == "X" && g == "X")
+	{
+		$("#1C").css('background','#07ed53');
+		$("#2B").css('background','#07ed53');
+		$("#3A").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+	if(c == "O" && e == "O" && g == "O")
+	{
+		$("#1C").css('background','#07ed53');
+		$("#2B").css('background','#07ed53');
+		$("#3A").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+	//Combinación8 a, e, i
+	if(a == "X" && e == "X" && i == "X")
+	{
+		$("#1A").css('background','#07ed53');
+		$("#2B").css('background','#07ed53');
+		$("#3C").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+	if(a == "O" && e == "O" && i == "O")
+	{
+		$("#1A").css('background','#07ed53');
+		$("#2B").css('background','#07ed53');
+		$("#3C").css('background','#07ed53');
+
+		alert("FELICIDADES GANASTE LA PARTIDA");
+	}
+
+		}	
+		}
+	
+   
+</script>
+
+
